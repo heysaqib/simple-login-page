@@ -8,6 +8,7 @@ router.get('/', (req, res) => {
             res.send("Error");
         }
         else {
+            res.clearCookie('connect.sid');
             res.render('index', { title: 'Login System', logout: 'Logged out successfully!' });
         }
     });
